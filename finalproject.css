@@ -1,0 +1,140 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333; 
+    display: flex;/* 横向展示 */
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.other {
+    text-decoration: none;
+    color: #333;
+    margin-left: 40px; 
+}
+
+.chosen {
+    font-weight: bold; 
+}
+
+.container {
+    max-width: 1200px;
+    padding-top: 30px;
+}
+
+.citylist {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-bottom: 50px;
+}
+
+.city {
+    display: flex;
+    flex-direction: column;/* 变成从上到下竖排 */
+    align-items: center;
+    font-size: 14px;
+}
+
+.city img {
+    margin-bottom: 5px;
+    width: 25px; 
+}
+
+.boxandvisual {
+    display: grid;
+    grid-template-rows: 180px 250px; 
+    row-gap: 30px; /* 上下格子的间距 */
+    column-gap: 80px;
+    justify-content: center;
+}
+
+.box {
+    background-color: #fcecd9;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box; /* 让width包含padding和border */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* 文字滚动 */
+}
+
+.top-left, .top-right {
+    height: 180px; 
+}
+
+.bottom-left, .bottom-right { 
+    height: 250px; 
+}
+
+/* 格子定位 */
+.top-left { grid-column: 1 / 2; grid-row: 1 / 2; }
+.top-right { grid-column: 3 / 4; grid-row: 1 / 2; }
+.bottom-left { grid-column: 1 / 2; grid-row: 2 / 3; }
+.bottom-right { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+.interaction {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.interaction-box {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    flex: 1; /* 提供图片的上下空间 */
+    margin-bottom: 10px; 
+}
+
+.interaction-png img {
+    width: 40px; 
+}
+
+.diary-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #dcbfa0; 
+    border-radius: 8px;
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tree-visual {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.weather-visual {
+    position: absolute; /* 以relative来定位的*/
+    width: 100%;
+    height: 100%;
+    background-size: contain; /* 保持图片完整且不会被裁剪 */
+    background-repeat: no-repeat; /* 图片不叠加 */
+    transform: translateX(-110px); 
+}
+
+.tree-visual img {
+    width: 300px;
+    transform: translateX(110px); 
+}
